@@ -1,20 +1,31 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# JSCPD scripts
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+A repository of usefull scripts to use along with JSCPD tool  
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+### Using JSCPD as part of your build in Jenkins  
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+ ###### Follow the steps below : - 
+   
+  1. Install Jenkins NodeJS plugin 
+     a. Login as Admin
+     b. Navigate to 'Manage Jenkins' -> 'Manage Plugins'
+     c. Navigate to 'Available' Section
+     d. Search for NodeJS plugin 
+     e. Click on 'Install without restart'
+ 2. Once Installed Navigate back to 'Manage Jenkins' -> 'Global tool Configuration'
+ 3. Scroll down to NodeJS installations, specify the version of NodeJS ( select latest )
+ 4. In the name textbox enter 'Install and setup NodeJS'
+ 5. In the textbox 'Global npm packages to install' enter 'jscpd JSON.sh'
+   
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+ ###### Now that you are done setting up jscpd tool in your CI environment, Next we have to run it as part of our build 
+   
+ 1. Navigate to your Task/Project in Jenkins 
+ 2. Click on configure in the left vertical menu 
+ 3. Select build tab 
+ 4. Click on the dropdown 'Add Build step'
+ 5. Select 'Install and setup NodeJS'
+ 6. Just leave rest of the textboxes and textareas as default . 
+ 7. Now add another build step by clicking on the dropdown 'Add Build step' 
+ 8. Select 'Execute Shell'
+ 9. Place the code in the script jenkins_build.sh in the text area 
