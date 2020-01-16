@@ -1,4 +1,4 @@
-# JSCPD scripts
+# JSCPD enablers
 
 A repository of usefull scripts to use along with JSCPD tool  
 
